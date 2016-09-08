@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.greenField{
+		background-color: rgba(59,140,66,0.70);
+		width: 230px;
+		height: 140px;
+		margin: 10px auto;
+		position: relative;
+		border:1px solid #c7cab4;
+		z-index: 2;
+	}
+	.smallRect{
+		width:20px;
+		height: 20px;
+		background-color: rgba(59,140,66,0.70);
+		border-left:1px solid #c7cab4;
+		border-top:1px solid #c7cab4;
+		position: relative;
+		top: -10px;
+		z-index: 1;
+		transform: rotate(45deg);
+	}
+	</style>
+</head>
+<body style="outline: none;"></body>
+</html>
+<span style="color: #FFF;font-weight: bold;">=</span>
+
+<form>
+	<div style="width=820px; float: right;" class="inputwrap">
+		<div style="float: left; margin: 3px;  border-right: 3px solid  rgba(215,215,215,0.2); border-left: 3px solid  rgba(215,215,215,0.2); padding: 16px" class="input1 fl_left">
+			<div class="pic_input1" style="height: 353px">
+				<img src="http://hoosier-turf.com/wp-content/uploads/2016/04/rectangle.png" alt="rectangle"></div>
+									<div class="greenField">
+									<div class="smallRect"></div>
+									</div>
+			<span style="font-weight:bold; color:#fff;">For a rectangular shaped area enter:</span>
+
+			<div style="color:#fff">
+				Length of area:
+				<input type="text" size="6" name="length" id="length" />
+			</div>
+			<div style="color:#fff">
+				Width of area:
+				<input type="text" size="6" name="width" id="width" />
+			</div>
+
+			<div>
+				<span style="color: #FFF;font-weight: bold;">=</span>
+				<input type="text" size="6" value="0" name="ansRect" id="ansRect" />
+			</div>
+			<div >
+				<input type="button" value="Calculate" onclick="calcRect()" name="btnRect" id="btnRect" />
+			</div>
+		</div>
+
+		<div style=" float: left; margin: 3px; padding: 16px" class="input2 fl_left">
+			<div class="pic_input2" style="height: 353px">
+				<img src="http://hoosier-turf.com/wp-content/uploads/2016/04/circle.png"></div>
+			<span style="font-weight:bold; color: #fff">For a circle area enter:</span>
+
+			<div style="color:#fff">
+				Diameter of Circle:
+				<input type="text" size="6" name="diameter" id="diameter" />
+			</div>
+			<div style="visibility: hidden;" >
+				<span style="color: #FFF;font-weight: bold;">=</span>
+				<input  type="text" size="6" value="0"  />
+			</div>
+
+			<div>
+
+				<span style="color: #FFF;font-weight: bold;">=</span>
+				<input  type="text" size="6" value="0" name="ansCirc" id="ansCirc" />
+			</div>
+
+			<div>
+				<input type="button" value="Calculate" onclick="calcCirc()" name="btnCirc" id="btnCirc" />
+			</div>
+
+		</div>
+
+		<div style=" float: left; margin: 3px;  border-right: 3px solid  rgba(215,215,215,0.2); border-left: 3px solid  rgba(215,215,215,0.2); padding: 16px" class="input3 fl_left">
+			<div class="pic_input3" style="height: 353px">
+				<img src="http://hoosier-turf.com/wp-content/uploads/2016/04/triangle.png"></div>
+
+			<span style="font-weight:bold;color:#fff">For a triangle shaped area enter:</span>
+
+			<div style="color:#fff">
+				Base of triangle:
+				<input type="text" size="6" name="base" id="base" />
+			</div>
+
+			<div style="color:#fff">
+				Height of triangle:
+				<input type="text" size="6" name="height" id="height" />
+			</div>
+			<div>
+				<span style="color: #FFF;font-weight: bold;">=</span>
+				<input type="text" size="6" value="0" name="ansTria" id="ansTria" />
+			</div>
+
+			<div>
+				<input type="button" value="Calculate" onclick="calcTria()" name="btnTria" id="btnTria" />
+			</div>
+
+		</div>
+		<div style="clear: both;"></div>
+
+		<input type="reset" value="Reset" onclick="resetCalc()" name="reset" id="reset" />
+
+	</div>
+</form>
